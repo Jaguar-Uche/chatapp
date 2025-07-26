@@ -17,6 +17,13 @@ export const io = new Server(server, {
   cors: { origin: "*" },
 });
 
+app.use(
+  cors({
+    origin: "https://chatapp-sigma-dun.vercel.app", // Your frontend domain
+    credentials: true, // If you're using cookies
+  })
+);
+
 //store online users
 
 export const userSocketMap = {}; //userId: socketId
