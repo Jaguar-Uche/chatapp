@@ -14,7 +14,7 @@ const server = http.createServer(app); //socket.io supports http server
 // Initialize socket.io server
 
 export const io = new Server(server, {
-  cors: { origin: "*" },
+  cors: { origin: "https://chatapp-sigma-dun.vercel.app", credentials: true },
 });
 
 app.use(
