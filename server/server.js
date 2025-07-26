@@ -17,12 +17,12 @@ export const io = new Server(server, {
   cors: { origin: "*" },
 });
 
-// app.use(
-//   cors({
-//     origin: "https://chatapp-sigma-dun.vercel.app", // Your frontend domain
-//     credentials: true, // If you're using cookies
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://chatapp-sigma-dun.vercel.app", // Your frontend domain
+    credentials: true, // If you're using cookies
+  })
+);
 
 //store online users
 
@@ -49,7 +49,6 @@ io.on("connection", (socket) => {
 
 // middleware setup
 
-app.use(cors()); //allows all url to connect to our server
 app.use(express.json({ limit: "4mb" })); //requests are parsed as json (limited to 4mb)
 
 app.use("/api/status", (req, res) => {
