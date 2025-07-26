@@ -14,12 +14,15 @@ const server = http.createServer(app); //socket.io supports http server
 // Initialize socket.io server
 
 export const io = new Server(server, {
-  cors: { origin: "https://chatapp-sigma-dun.vercel.app", credentials: true },
+  cors: {
+    origin: "https://chatapp-git-main-alexs-projects-d621940f.vercel.app/",
+    credentials: true,
+  },
 });
 
 app.use(
   cors({
-    origin: "https://chatapp-sigma-dun.vercel.app", // Your frontend domain
+    origin: "https://chatapp-git-main-alexs-projects-d621940f.vercel.app/", // Your frontend domain
     credentials: true, // If you're using cookies
   })
 );
