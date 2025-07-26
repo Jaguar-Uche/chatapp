@@ -19,7 +19,7 @@ export const io = new Server(server, {
 
 app.use(
   cors({
-    origin: "https://chatapp-sigma-dun.vercel.app", // Your frontend domain
+    origin: "*", // Your frontend domain
     credentials: true, // If you're using cookies
   })
 );
