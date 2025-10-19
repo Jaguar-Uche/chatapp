@@ -15,14 +15,24 @@ const server = http.createServer(app); //socket.io supports http server
 
 export const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+    "https://jaguar-uche.com",
+    "http://jaguar-uche.com",
+    "https://www.jaguar-uche.com",
+    "http://www.jaguar-uche.com",
+    ],
     credentials: true,
   },
 });
 
 app.use(
   cors({
-    origin: "*", // Your frontend domain
+    origin: [
+    "https://jaguar-uche.com",
+    "http://jaguar-uche.com",
+    "https://www.jaguar-uche.com",
+    "http://www.jaguar-uche.com",
+    ], // Your frontend domain
     credentials: true, // If you're using cookies
   })
 );
