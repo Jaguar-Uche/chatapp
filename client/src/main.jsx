@@ -6,7 +6,7 @@ import { AuthProvider } from '../context/AuthContext.jsx'
 import { ChatProvider } from '../context/chatContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/projects/chatapp'>
+  <BrowserRouter>
     <AuthProvider>
       <ChatProvider>
         <App />
