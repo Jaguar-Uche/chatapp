@@ -16,6 +16,7 @@ const server = http.createServer(app); //socket.io supports http server
 export const io = new Server(server, {
   cors: {
     origin: [
+    "https://chatapp-sigma-dun.vercel.app",
     "https://jaguar-uche.com",
     "http://jaguar-uche.com",
     "https://www.jaguar-uche.com",
