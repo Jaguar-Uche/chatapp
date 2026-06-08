@@ -29,6 +29,7 @@ export const io = new Server(server, {
 app.use(
   cors({
     origin: [
+    "https://chatapp-sigma-dun.vercel.app",
     "https://jaguar-uche.com",
     "http://jaguar-uche.com",
     "https://www.jaguar-uche.com",
